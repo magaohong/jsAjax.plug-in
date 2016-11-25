@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script src="ind.js"></script>
+	<script>
+	
+		Ajax({
+			type:"get",    //可不写，默认get
+			url:"data.json",  //必填
+			async:false,	//可不填  默认true
+			data:{},		//可不填  post方法传参
+			success:function(e){  //必须填写
+				console.log(JSON.parse(e))
+				alert("成功")
+			},
+			error:function(){    //可不填   错误回调
+				alert("报错")
+			}
+		})
+
+
+	</script>
+</body>
+</html>
